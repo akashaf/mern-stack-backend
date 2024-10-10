@@ -19,6 +19,10 @@ app.listen(process.env.PORT, () => {
 }
 );
 
+process.on('uncaughtException', (err) => {
+  console.log('whoops! there was an error');
+});
+
 module.exports = app;
 
 
